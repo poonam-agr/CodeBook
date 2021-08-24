@@ -1,0 +1,41 @@
+<h3>Add Code</h3>
+<div class="row">
+    <form action="/codes" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="ProblemName" name="ProblemName">
+                <label for="ProblemName">ProblemName</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status" name="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell Us About Your Code:</h5>
+                <textarea id="body" name="body"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Your Code:</h5>
+                <textarea id="codeArea" name="codeArea" placeholder="Write your code" autofocus
+                    style="height: 300px; padding:5px"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

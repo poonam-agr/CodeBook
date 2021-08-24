@@ -1,0 +1,44 @@
+<h3>Edit Code</h3>
+<div class="row">
+    <form action="/codes/{{code._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="ProblemName" name="ProblemName" value="{{code.ProblemName}}">
+                <label for="ProblemName">ProblemName</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status" name="status">
+                    {{#select code.status}}
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                    {{/select}}
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell Us About Your Code:</h5>
+                <textarea id="body" name="body">{{code.body}}</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Your Code:</h5>
+                <textarea id="codeArea" name="codeArea" autofocus
+                    style="height: 300px; padding:5px">{{code.codeArea}}</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>
